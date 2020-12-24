@@ -26,8 +26,13 @@
         android:label="fragment_instruction"
         tools:layout="@layout/fragment_instruction" />
     <fragment
-        android:id="@+id/shoeDetailFragment"
-        android:name="com.gilbertohdz.shoestore.ui.shoes.ShoeDetailFragment"
-        android:label="fragment_shoe_detail"
-        tools:layout="@layout/fragment_shoe_detail" />
+        android:id="@+id/shoesListFragment"
+        android:name="com.gilbertohdz.shoestore.ui.shoes.list.ShoesListFragment"
+        android:label="fragment_shoes_list"
+        tools:layout="@layout/fragment_shoes_list" />
+    <fragment
+        android:id="@+id/shoesDetailFragment"
+        android:name="com.gilbertohdz.shoestore.ui.shoes.detail.ShoesDetailFragment"
+        android:label="fragment_shoes_detail"
+        tools:layout="@layout/fragment_shoes_detail" />
 </navigation>

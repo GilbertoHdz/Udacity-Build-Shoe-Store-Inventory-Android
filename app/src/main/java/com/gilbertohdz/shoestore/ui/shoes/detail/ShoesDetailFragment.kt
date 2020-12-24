@@ -1,4 +1,4 @@
-package com.gilbertohdz.shoestore.ui.shoes
+package com.gilbertohdz.shoestore.ui.shoes.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.gilbertohdz.shoestore.R
 
-class ShoeDetailFragment : Fragment() {
+class ShoesDetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +18,6 @@ class ShoeDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shoe_detail, container, false)
+        return inflater.inflate(R.layout.fragment_shoes_detail, container, false)
     }
 }
