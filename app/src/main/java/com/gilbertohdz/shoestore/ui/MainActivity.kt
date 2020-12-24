@@ -1,7 +1,8 @@
-package com.gilbertohdz.shoestore
+package com.gilbertohdz.shoestore.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.gilbertohdz.shoestore.R
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
