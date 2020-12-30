@@ -2,37 +2,57 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/mainActivity">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.gilbertohdz.shoestore.ui.MainActivity"
-        android:label="MainActivity"
-        tools:layout="@layout/activity_main"/>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.gilbertohdz.shoestore.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_to_shoesListFragment"
+            app:destination="@id/shoesListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.gilbertohdz.shoestore.ui.welcome.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_to_instructionFragment"
+            app:destination="@id/instructionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
     <fragment
         android:id="@+id/instructionFragment"
         android:name="com.gilbertohdz.shoestore.ui.instruction.InstructionFragment"
-        android:label="fragment_instruction"
-        tools:layout="@layout/fragment_instruction" />
+        android:label="Instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_to_shoesListFragment"
+            app:destination="@id/shoesListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
     <fragment
         android:id="@+id/shoesListFragment"
         android:name="com.gilbertohdz.shoestore.ui.shoes.list.ShoesListFragment"
-        android:label="fragment_shoes_list"
-        tools:layout="@layout/fragment_shoes_list" />
+        android:label="Shoes List"
+        tools:layout="@layout/fragment_shoes_list" >
+        <action
+            android:id="@+id/action_to_shoesDetailFragment"
+            app:destination="@id/shoesDetailFragment" />
+        <action
+            android:id="@+id/action_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoesDetailFragment"
         android:name="com.gilbertohdz.shoestore.ui.shoes.detail.ShoesDetailFragment"
-        android:label="fragment_shoes_detail"
+        android:label="Shoes Detail"
         tools:layout="@layout/fragment_shoes_detail" />
 </navigation>
