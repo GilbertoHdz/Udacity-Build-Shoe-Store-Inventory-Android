@@ -54,7 +54,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_add"
-            android:contentDescription="Go to description" />
+            android:contentDescription="@string/shoes_list_go_to_description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
