@@ -40,4 +40,4 @@ Download the project and import from Android Studio then sync the project with g
 Include all items used to build project.
 
 ## License
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)
