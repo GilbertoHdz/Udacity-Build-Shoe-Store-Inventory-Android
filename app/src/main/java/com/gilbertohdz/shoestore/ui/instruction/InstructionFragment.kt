@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.gilbertohdz.shoestore.databinding.FragmentInstructionBinding
 
@@ -28,7 +29,12 @@ class InstructionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.instructionToInstructionAction.setOnClickListener {
-            findNavController().navigate(InstructionFragmentDirections.actionToShoesListFragment())
+            findNavController().apply {
+                val navOptions = NavOptions.Builder()
+                        .setPopUpTo(graph.startDestination, true)
+                        .build()
+                navigate(InstructionFragmentDirections.actionToShoesListFragment(), navOptions)
+            }
         }
     }
 }

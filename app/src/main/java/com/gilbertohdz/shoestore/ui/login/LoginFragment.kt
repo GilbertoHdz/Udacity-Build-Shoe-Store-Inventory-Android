@@ -3,6 +3,7 @@ package com.gilbertohdz.shoestore.ui.login
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.gilbertohdz.shoestore.databinding.FragmentLoginBinding
 import com.gilbertohdz.shoestore.ui.MainActivity
@@ -32,7 +33,12 @@ class LoginFragment : Fragment() {
             }
 
             loginExistAccountAction.setOnClickListener {
-                findNavController().navigate(LoginFragmentDirections.actionToShoesListFragment())
+                findNavController().apply {
+                    val navOptions = NavOptions.Builder()
+                            .setPopUpTo(graph.startDestination, true)
+                            .build()
+                    navigate(LoginFragmentDirections.actionToShoesListFragment(), navOptions)
+                }
             }
         }
     }
