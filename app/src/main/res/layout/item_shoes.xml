@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="shoeDet"
+            type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemShoeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/item_shoe_name(shoeDet.name)}"
+            tools:text="Tiro Loco" />
+
+        <TextView
+            android:id="@+id/itemShoeCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/item_shoe_company(shoeDet.company)}"
+            tools:text="Gilinho Company's" />
+
+        <TextView
+            android:id="@+id/itemShoeSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/item_shoe_size(shoeDet.size)}"
+            tools:text="7" />
+    </LinearLayout>
+</layout>
