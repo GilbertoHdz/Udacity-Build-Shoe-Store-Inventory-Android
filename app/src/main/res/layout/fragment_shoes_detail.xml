@@ -4,6 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.gilbertohdz.shoestore.ui.shoes.ShoesViewModel" />
+
+        <variable
+            name="shoeDetail"
+            type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoesDetailContainer"
         android:layout_width="match_parent"

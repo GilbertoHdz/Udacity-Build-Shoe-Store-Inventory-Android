@@ -24,7 +24,6 @@ class ShoesListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // val shoesVieModel: ShoesViewModel by viewModels()
         val viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
 
         binding = FragmentShoesListBinding.inflate(inflater, container, false)
