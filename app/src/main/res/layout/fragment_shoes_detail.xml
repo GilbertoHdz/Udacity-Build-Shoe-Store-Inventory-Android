@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/shoes_detail_shoe_size"
-            android:inputType="textPersonName"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/shoesDetailDescriptionEdit"
             app:layout_constraintEnd_toEndOf="@+id/shoesDetailCompanyEdit"
             app:layout_constraintStart_toStartOf="@+id/shoesDetailCompanyEdit"

@@ -8,30 +8,37 @@
             type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
     </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="8dp">
 
-        <TextView
-            android:id="@+id/itemShoeName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{@string/item_shoe_name(shoeDet.name)}"
-            tools:text="Tiro Loco" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/itemShoeCompany"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{@string/item_shoe_company(shoeDet.company)}"
-            tools:text="Gilinho Company's" />
+            <TextView
+                android:id="@+id/itemShoeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/item_shoe_name(shoeDet.name)}"
+                tools:text="Tiro Loco" />
 
-        <TextView
-            android:id="@+id/itemShoeSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{@string/item_shoe_size(shoeDet.size)}"
-            tools:text="7" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/itemShoeCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/item_shoe_company(shoeDet.company)}"
+                tools:text="Gilinho Company's" />
+
+            <TextView
+                android:id="@+id/itemShoeSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/item_shoe_size(shoeDet.size)}"
+                tools:text="7" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

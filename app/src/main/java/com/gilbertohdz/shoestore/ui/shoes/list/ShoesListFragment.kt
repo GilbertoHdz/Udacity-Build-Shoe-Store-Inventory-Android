@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.gilbertohdz.shoestore.R
 import com.gilbertohdz.shoestore.databinding.FragmentShoesListBinding
 import com.gilbertohdz.shoestore.ui.shoes.ShoesViewModel
 import com.gilbertohdz.shoestore.ui.shoes.list.view.ShoesListAdapter
@@ -24,9 +27,9 @@ class ShoesListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
+        val viewModel: ShoesViewModel by activityViewModels()
 
-        binding = FragmentShoesListBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoes_list, container, false)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
         binding.shoesListRecyclerView.adapter = ShoesListAdapter(viewModel)

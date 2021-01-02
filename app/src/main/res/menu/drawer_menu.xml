@@ -17,6 +17,6 @@
 
         <item
             android:id="@+id/menu_log_out"
-            android:title="@string/menu_log_out" />
+            android:title="Log out" />
     </group>
 </menu>
