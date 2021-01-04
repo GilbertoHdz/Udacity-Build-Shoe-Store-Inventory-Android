@@ -14,6 +14,8 @@
             type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
     </data>
 
+    <!-- ConstraintLayout because we have many widgets that need be assigned with their own group of elements,
+     Constraint is better in this case because we don't need to create more layouts to separate groups-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoesDetailContainer"
         android:layout_width="match_parent"

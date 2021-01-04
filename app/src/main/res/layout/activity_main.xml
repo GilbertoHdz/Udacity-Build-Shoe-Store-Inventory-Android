@@ -4,6 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- I don't have experience with DrawerLayout and CoordinatorLayout, so in order to learn more
+     I decided use the Material best practice  guideline to made a better toolbar and menu with different elements instead of a simple menu,
+     this implementation was interesting for me. -->
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
@@ -41,6 +44,8 @@
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+        <!-- This was necessary for DrawerLayout in order to navigate in the menu section,
+        using this approach gives me a better understanding of the navigation component. -->
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navView"
             android:layout_width="match_parent"

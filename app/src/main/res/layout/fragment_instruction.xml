@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- LinearLayout is the best on conceptual complexity,
+    but in this case, ConstraintLayout was used because we need to separate the widget each one an another -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/instructionContainer"
         android:layout_width="match_parent"

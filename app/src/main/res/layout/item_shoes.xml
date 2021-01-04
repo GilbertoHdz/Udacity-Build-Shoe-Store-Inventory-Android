@@ -8,6 +8,8 @@
             type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
     </data>
 
+    <!-- To make a pretty item row we use a CardView with a LinearLayout instead ConstraintView
+     because we don't have images or some specification to display the elements -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
