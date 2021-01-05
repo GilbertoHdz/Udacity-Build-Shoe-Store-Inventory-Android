@@ -2,9 +2,11 @@ package com.gilbertohdz.shoestore.ui.login
 
 import android.os.Bundle
 import android.view.*
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.gilbertohdz.shoestore.R
 import com.gilbertohdz.shoestore.databinding.FragmentLoginBinding
 import com.gilbertohdz.shoestore.ui.MainActivity
 
@@ -21,7 +23,7 @@ class LoginFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         return binding.root
     }
 
