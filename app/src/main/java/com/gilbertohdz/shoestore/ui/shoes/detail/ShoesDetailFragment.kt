@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.gilbertohdz.shoestore.R
 import com.gilbertohdz.shoestore.databinding.FragmentShoesDetailBinding
 import com.gilbertohdz.shoestore.ui.shoes.ShoesViewModel
-import com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail
 
 class ShoesDetailFragment : Fragment() {
 
@@ -37,25 +36,11 @@ class ShoesDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.shoesDetailSaveAction.setOnClickListener {
-            addNewItem()
-        }
-        binding.shoesDetailCancelAction.setOnClickListener {
-            findNavController().popBackStack()
-        }
-    }
-
-    private fun addNewItem() {
-        binding.let {
-            val newItem = ShoeDetail(
-                    it.shoesDetailNameEdit.text.toString(),
-                    it.shoesDetailCompanyEdit.text.toString(),
-                    it.shoesDetailSizeEdit.text.toString(),
-                    it.shoesDetailDescriptionEdit.text.toString()
-            )
-
-            viewModel.addNewShoe(newItem)
-            findNavController().popBackStack()
-        }
+        viewModel.navigateBack.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                findNavController().popBackStack()
+                viewModel.navigateBack.value = null
+            }
+        })
     }
 }

@@ -10,8 +10,8 @@
             type="com.gilbertohdz.shoestore.ui.shoes.ShoesViewModel" />
 
         <variable
-            name="shoeDetail"
-            type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeDetail" />
+            name="shoeObserver"
+            type="com.gilbertohdz.shoestore.ui.shoes.models.ShoeObservable" />
     </data>
 
     <!-- ConstraintLayout because we have many widgets that need be assigned with their own group of elements,
@@ -29,6 +29,7 @@
             android:ems="10"
             android:hint="@string/shoes_detail_name"
             android:inputType="textPersonName"
+            android:text="@={viewModel.shoeObservable.name}"
             app:layout_constraintBottom_toTopOf="@+id/shoesDetailCompanyEdit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.15"
@@ -42,6 +43,7 @@
             android:ems="10"
             android:hint="@string/shoes_detail_company"
             android:inputType="textPersonName"
+            android:text="@={viewModel.shoeObservable.company}"
             app:layout_constraintBottom_toTopOf="@+id/shoesDetailSizeEdit"
             app:layout_constraintEnd_toEndOf="@+id/shoesDetailNameEdit"
             app:layout_constraintStart_toStartOf="@+id/shoesDetailNameEdit"
@@ -54,6 +56,7 @@
             android:ems="10"
             android:hint="@string/shoes_detail_shoe_size"
             android:inputType="number"
+            android:text="@={viewModel.shoeObservable.size}"
             app:layout_constraintBottom_toTopOf="@+id/shoesDetailDescriptionEdit"
             app:layout_constraintEnd_toEndOf="@+id/shoesDetailCompanyEdit"
             app:layout_constraintStart_toStartOf="@+id/shoesDetailCompanyEdit"
@@ -66,6 +69,7 @@
             android:ems="10"
             android:hint="@string/shoes_detail_description"
             android:inputType="textPersonName"
+            android:text="@={viewModel.shoeObservable.description}"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="@+id/shoesDetailSizeEdit"
             app:layout_constraintStart_toStartOf="@+id/shoesDetailSizeEdit"
@@ -76,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/shoes_detail_save_action"
+            android:onClick="@{() -> viewModel.addNewShoe()}"
             app:layout_constraintBottom_toTopOf="@+id/shoesDetailCancelAction"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/shoes_detail_cancel_action"
+            android:onClick="@{() -> viewModel.cancel()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/shoesDetailSaveAction"
             app:layout_constraintStart_toStartOf="@+id/shoesDetailSaveAction"
