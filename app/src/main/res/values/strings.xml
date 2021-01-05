@@ -8,6 +8,7 @@
     <string name="item_shoe_name">Name: %s</string>
     <string name="item_shoe_size">Size: %s</string>
     <string name="item_shoe_company">Company: %s</string>
+    <string name="item_shoe_description">Description: %s</string>
     <string name="instruction_title">Instruction</string>
     <string name="instruction_description">Here you can learn how this applications works, Enjoy!.</string>
     <string name="instruction_go_action">Go to Shoe List</string>

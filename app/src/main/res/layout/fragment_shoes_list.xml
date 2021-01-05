@@ -28,16 +28,7 @@
                 android:id="@+id/shoesListLinearLayoutContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/shoesListRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:shoesItems="@{viewModel.shoes}"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_shoes"/>
-            </LinearLayout>
+                android:orientation="vertical"/>
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
